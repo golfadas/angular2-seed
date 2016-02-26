@@ -1,10 +1,15 @@
 export class Todo {
-  completed = false;
+  status:string = 'not_completed';
+
   constructor(public message:string = '') {
 
   }
 
   toggle():void  {
-    this.completed = !this.completed;
+    if (this.status === 'completed') {
+      this.status = 'not_completed';
+    }else {
+      this.status = 'completed';
+    }
   }
 }
