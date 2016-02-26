@@ -10,7 +10,9 @@ import {TodoSearchPipe} from "./todo-search.pipe";
   template: `<div>
     <ul>
     <li *ngFor="#todo of todoService.get() | todoSearch">
-    <todo-item-renderer [todo]="todo"></todo-item-renderer>
+    <todo-item-renderer
+    [todo]="todo"
+    (toggle)="todoService.toggleTodo($event)"></todo-item-renderer>
     </li>
     </ul>
   </div>`

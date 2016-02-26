@@ -15,4 +15,16 @@ export class TodoService {
   add(value: string): void {
     this.todos = [...this.todos, new Todo(value)];
   }
+
+  toggleTodo(todo: Todo) {
+    todo.toggle();
+
+    const i = this.todos.indexOf(todo);
+
+    this.todos = [
+      ...this.todos.slice(0,i),
+      todo,
+      ...this.todos.slice(i + 1)
+    ];
+  }
 }
