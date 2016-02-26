@@ -6,7 +6,8 @@ import {Todo} from "./todo.model";
 })
 
 export class TodoSearchPipe {
-  transform(value: Todo[]) {
-    return value.filter(item => item.status === 'not_completed');
+  transform(value: Todo[], [status]): Todo[] {
+    console.log(status);
+    return value.filter(item => item.status === status);
   }
 }

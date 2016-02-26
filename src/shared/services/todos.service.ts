@@ -3,7 +3,7 @@ import {Todo} from '../../todo/todo.model';
 
 @Injectable()
 export class TodoService {
-  todos:[Todo] = [
+  todos: Todo[] = [
     new Todo('ola'),
     new Todo('ole'),
     new Todo('bla')
