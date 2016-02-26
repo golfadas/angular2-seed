@@ -13,6 +13,6 @@ export class TodoService {
     return this.todos;
   }
   add(value: string): void {
-    this.todos.push(new Todo(value));
+    this.todos = [...this.todos, new Todo(value)];
   }
 }
