@@ -5,7 +5,10 @@ import {TodoService} from '../shared/services/todos.service';
   selector: 'todo-list',
   template: `<div>
     <ul>
-    <li *ngFor="#todo of todoService.get()">{{todo.message}}</li>
+    <li *ngFor="#todo of todoService.get()">
+    <span [hidden]="todo.completed">{{todo.message}}</span>
+    <button (click)="todo.toggle()">Toggle</button>
+    </li>
     </ul>
   </div>`
 })

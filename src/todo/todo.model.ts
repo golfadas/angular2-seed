@@ -3,4 +3,8 @@ export class Todo {
   constructor(public message:string = '') {
 
   }
+
+  toggle():void  {
+    this.completed = !this.completed;
+  }
 }
