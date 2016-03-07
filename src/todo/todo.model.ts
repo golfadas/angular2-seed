@@ -1,9 +1,6 @@
 export class Todo {
-  status:string = 'not_completed';
-
-  constructor(public message:string = '') {
-
-  }
+  constructor(public message:string = '',
+              public status:string = 'not_completed') {}
 
   toggle():void  {
     if (this.status === 'completed') {
