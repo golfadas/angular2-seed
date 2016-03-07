@@ -18,13 +18,13 @@ export class TodoService {
   }
 
   toggleTodo(todo: Todo) {
-    todo.toggle();
+    var new_todo = todo.toggle();
 
     const i = this.todos.indexOf(todo);
 
     this.todos = [
       ...this.todos.slice(0,i),
-      todo,
+      new_todo,
       ...this.todos.slice(i + 1)
     ];
   }
